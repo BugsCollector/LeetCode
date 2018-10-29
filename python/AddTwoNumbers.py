@@ -17,7 +17,7 @@ class ListNode(object):
         self.val = x
         self.next = None
 
-    def print(self):
+    def printf(self):
         ret = []
         cur = self
         while cur:
@@ -77,4 +77,4 @@ l2 = [6]
 l1_head = obj.translate(l1)
 l2_head = obj.translate(l2)
 ret = obj.addTwoNumbers(l1_head, l2_head)
-ret.print()
+ret.printf()

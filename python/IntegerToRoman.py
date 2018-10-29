@@ -80,8 +80,21 @@ class Solution(object):
                 remains -= k * ret
         return out
 
+
 obj = Solution()
-testCases = (1,3,4,9,12,20,42,58,94,123,421,1994)
-for test in testCases:
+testCases = {1:     "I",
+             3:     "III",
+             4:     "IV",
+             9:     "IX",
+             12:    "XII",
+             20:    "XX",
+             42:    "XLII",
+             58:    "LVIII",
+             94:    "XCIV",
+             123:   "CXXIII",
+             421:   "CDXXI",
+             1994:  "MCMXCIV"}
+for test, result in testCases.iteritems():
     ret = obj.intToRoman(test)
-    print("{0}={1}".format(test,ret))
+    print("{0}: expected:{1}, real:{2}".format(test, result, ret))
+    assert(ret == result)
